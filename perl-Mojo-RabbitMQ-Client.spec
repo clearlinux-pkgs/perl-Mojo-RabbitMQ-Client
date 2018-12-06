@@ -70,15 +70,15 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.1Mojo/RabbitMQ/Client.pm
-/usr/lib/perl5/vendor_perl/5.28.1Mojo/RabbitMQ/Client/Channel.pm
-/usr/lib/perl5/vendor_perl/5.28.1Mojo/RabbitMQ/Client/Consumer.pm
-/usr/lib/perl5/vendor_perl/5.28.1Mojo/RabbitMQ/Client/LocalQueue.pm
-/usr/lib/perl5/vendor_perl/5.28.1Mojo/RabbitMQ/Client/Method.pm
-/usr/lib/perl5/vendor_perl/5.28.1Mojo/RabbitMQ/Client/Method/Publish.pm
-/usr/lib/perl5/vendor_perl/5.28.1Mojo/RabbitMQ/Client/Publisher.pm
-/usr/lib/perl5/vendor_perl/5.28.1auto/share/dist/Mojo-RabbitMQ-Client/amqp0-9-1.stripped.extended.xml
-/usr/lib/perl5/vendor_perl/5.28.1auto/share/dist/Mojo-RabbitMQ-Client/fixed_amqp0-8.xml
+/usr/lib/perl5/vendor_perl/5.28.1/Mojo/RabbitMQ/Client.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Mojo/RabbitMQ/Client/Channel.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Mojo/RabbitMQ/Client/Consumer.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Mojo/RabbitMQ/Client/LocalQueue.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Mojo/RabbitMQ/Client/Method.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Mojo/RabbitMQ/Client/Method/Publish.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Mojo/RabbitMQ/Client/Publisher.pm
+/usr/lib/perl5/vendor_perl/5.28.1/auto/share/dist/Mojo-RabbitMQ-Client/amqp0-9-1.stripped.extended.xml
+/usr/lib/perl5/vendor_perl/5.28.1/auto/share/dist/Mojo-RabbitMQ-Client/fixed_amqp0-8.xml
 
 %files dev
 %defattr(-,root,root,-)
