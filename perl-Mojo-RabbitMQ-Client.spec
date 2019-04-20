@@ -4,7 +4,7 @@
 #
 Name     : perl-Mojo-RabbitMQ-Client
 Version  : 0.2.1
-Release  : 8
+Release  : 9
 URL      : https://cpan.metacpan.org/authors/id/S/SE/SEBAPOD/Mojo-RabbitMQ-Client-0.2.1.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SE/SEBAPOD/Mojo-RabbitMQ-Client-0.2.1.tar.gz
 Summary  : 'Mojo::IOLoop based RabbitMQ client'
@@ -25,6 +25,7 @@ BuildRequires : perl(Module::Build::Tiny)
 Summary: dev components for the perl-Mojo-RabbitMQ-Client package.
 Group: Development
 Provides: perl-Mojo-RabbitMQ-Client-devel = %{version}-%{release}
+Requires: perl-Mojo-RabbitMQ-Client = %{version}-%{release}
 
 %description dev
 dev components for the perl-Mojo-RabbitMQ-Client package.
