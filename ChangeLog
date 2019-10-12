@@ -1,3 +1,15 @@
+0.3.1 2019-08-20T20:45:53Z
+  - Re-apply licensing note from #37 - now in proper place
+0.3.0 2019-08-20T20:35:39Z
+  - Allow EXTERNAL as well as AMQPLAIN auth #35 (@AdamWill)
+  - fixes legal issues with AMQP specs licensing #37
+0.2.4 2019-08-20T00:49:27Z
+  - Prevent warning about undefined object on closed channels #36 (@okurz)
+0.2.3 2019-07-24T21:06:16Z
+  - Clarified documentation #33, #34 (@AdamWill)
+0.2.2 2019-05-23T11:20:22Z
+  - Minor documentation fixes #32 (@sjn)
+  - fix around 30 memory leaks #31 (@kraih)
 0.2.1 2018-07-29T14:17:43Z
   - Fixed POD syntax, spelling & grammar errors #27,#28 (@gregoa)
   - Fixed POD error #26 (@manwar)
