@@ -4,13 +4,15 @@
 #
 Name     : perl-Mojo-RabbitMQ-Client
 Version  : 0.3.1
-Release  : 10
+Release  : 11
 URL      : https://cpan.metacpan.org/authors/id/S/SE/SEBAPOD/Mojo-RabbitMQ-Client-0.3.1.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SE/SEBAPOD/Mojo-RabbitMQ-Client-0.3.1.tar.gz
 Summary  : 'Mojo::IOLoop based RabbitMQ client'
 Group    : Development/Tools
 License  : Artistic-2.0
 Requires: perl-Mojo-RabbitMQ-Client-license = %{version}-%{release}
+Requires: perl-Mojo-RabbitMQ-Client-perl = %{version}-%{release}
+Requires: perl(Net::AMQP)
 BuildRequires : buildreq-cpan
 BuildRequires : perl(ExtUtils::Config)
 BuildRequires : perl(ExtUtils::Helpers)
@@ -26,7 +28,6 @@ Summary: dev components for the perl-Mojo-RabbitMQ-Client package.
 Group: Development
 Provides: perl-Mojo-RabbitMQ-Client-devel = %{version}-%{release}
 Requires: perl-Mojo-RabbitMQ-Client = %{version}-%{release}
-Requires: perl-Mojo-RabbitMQ-Client = %{version}-%{release}
 
 %description dev
 dev components for the perl-Mojo-RabbitMQ-Client package.
@@ -40,8 +41,18 @@ Group: Default
 license components for the perl-Mojo-RabbitMQ-Client package.
 
 
+%package perl
+Summary: perl components for the perl-Mojo-RabbitMQ-Client package.
+Group: Default
+Requires: perl-Mojo-RabbitMQ-Client = %{version}-%{release}
+
+%description perl
+perl components for the perl-Mojo-RabbitMQ-Client package.
+
+
 %prep
 %setup -q -n Mojo-RabbitMQ-Client-0.3.1
+cd %{_builddir}/Mojo-RabbitMQ-Client-0.3.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -59,7 +70,7 @@ fi
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/perl-Mojo-RabbitMQ-Client
-cp LICENSE %{buildroot}/usr/share/package-licenses/perl-Mojo-RabbitMQ-Client/LICENSE
+cp %{_builddir}/Mojo-RabbitMQ-Client-0.3.1/LICENSE %{buildroot}/usr/share/package-licenses/perl-Mojo-RabbitMQ-Client/e1f58d39e305bc7f8669fd993c6f74a73b4e0542
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -72,14 +83,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Mojo/RabbitMQ/Client.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Mojo/RabbitMQ/Client/Channel.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Mojo/RabbitMQ/Client/Consumer.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Mojo/RabbitMQ/Client/LocalQueue.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Mojo/RabbitMQ/Client/Method.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Mojo/RabbitMQ/Client/Method/Publish.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Mojo/RabbitMQ/Client/Publisher.pm
-/usr/lib/perl5/vendor_perl/5.28.2/auto/share/dist/Mojo-RabbitMQ-Client/amqp0-9-1.stripped.extended.xml
 
 %files dev
 %defattr(-,root,root,-)
@@ -93,4 +96,15 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/perl-Mojo-RabbitMQ-Client/LICENSE
+/usr/share/package-licenses/perl-Mojo-RabbitMQ-Client/e1f58d39e305bc7f8669fd993c6f74a73b4e0542
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.28.2/Mojo/RabbitMQ/Client.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Mojo/RabbitMQ/Client/Channel.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Mojo/RabbitMQ/Client/Consumer.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Mojo/RabbitMQ/Client/LocalQueue.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Mojo/RabbitMQ/Client/Method.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Mojo/RabbitMQ/Client/Method/Publish.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Mojo/RabbitMQ/Client/Publisher.pm
+/usr/lib/perl5/vendor_perl/5.28.2/auto/share/dist/Mojo-RabbitMQ-Client/amqp0-9-1.stripped.extended.xml
