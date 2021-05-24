@@ -4,7 +4,7 @@
 #
 Name     : perl-Mojo-RabbitMQ-Client
 Version  : 0.3.1
-Release  : 15
+Release  : 16
 URL      : https://cpan.metacpan.org/authors/id/S/SE/SEBAPOD/Mojo-RabbitMQ-Client-0.3.1.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SE/SEBAPOD/Mojo-RabbitMQ-Client-0.3.1.tar.gz
 Summary  : 'Mojo::IOLoop based RabbitMQ client'
@@ -100,11 +100,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.32.1/Mojo/RabbitMQ/Client.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Mojo/RabbitMQ/Client/Channel.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Mojo/RabbitMQ/Client/Consumer.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Mojo/RabbitMQ/Client/LocalQueue.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Mojo/RabbitMQ/Client/Method.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Mojo/RabbitMQ/Client/Method/Publish.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Mojo/RabbitMQ/Client/Publisher.pm
-/usr/lib/perl5/vendor_perl/5.32.1/auto/share/dist/Mojo-RabbitMQ-Client/amqp0-9-1.stripped.extended.xml
+/usr/lib/perl5/vendor_perl/5.34.0/Mojo/RabbitMQ/Client.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Mojo/RabbitMQ/Client/Channel.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Mojo/RabbitMQ/Client/Consumer.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Mojo/RabbitMQ/Client/LocalQueue.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Mojo/RabbitMQ/Client/Method.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Mojo/RabbitMQ/Client/Method/Publish.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Mojo/RabbitMQ/Client/Publisher.pm
+/usr/lib/perl5/vendor_perl/5.34.0/auto/share/dist/Mojo-RabbitMQ-Client/amqp0-9-1.stripped.extended.xml
