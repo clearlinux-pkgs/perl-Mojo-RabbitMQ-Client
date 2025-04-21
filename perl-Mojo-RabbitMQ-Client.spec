@@ -7,7 +7,7 @@
 #
 Name     : perl-Mojo-RabbitMQ-Client
 Version  : 0.3.1
-Release  : 25
+Release  : 26
 URL      : https://cpan.metacpan.org/authors/id/S/SE/SEBAPOD/Mojo-RabbitMQ-Client-0.3.1.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SE/SEBAPOD/Mojo-RabbitMQ-Client-0.3.1.tar.gz
 Summary  : 'Mojo::IOLoop based RabbitMQ client'
